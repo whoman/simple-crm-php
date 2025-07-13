@@ -1,0 +1,222 @@
+/* Custom Styles for Simple CRM */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --info-color: #16a085;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+/* Cards */
+.card {
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,.1) !important;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    font-weight: 500;
+}
+
+/* Tables */
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+/* Forms */
+.form-control, .form-select {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+/* Status Badges */
+.badge {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 15px;
+}
+
+/* Dashboard Stats */
+.stat-card {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.stat-card h3 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+.stat-card.primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-right-color: #2980b9;
+}
+
+.stat-card.success {
+    background: linear-gradient(135deg, #27ae60, #229954);
+    border-right-color: #229954;
+}
+
+.stat-card.warning {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border-right-color: #e67e22;
+}
+
+.stat-card.danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border-right-color: #c0392b;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.action-buttons .btn {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    
+    .col-md-10 {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .table {
+        font-size: 12px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar, .navbar, .btn, .action-buttons, footer {
+        display: none !important;
+    }
+    
+    .col-md-10 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #dee2e6 !important;
+    }
+}
+
+/* Loading Spinner */
+.spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 0.2em;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+/* Currency Input */
+.currency-input {
+    text-align: left;
+    direction: ltr;
+}
+
+/* Date Picker */
+input[type="date"] {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
